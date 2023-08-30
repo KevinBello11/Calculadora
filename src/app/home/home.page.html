@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="content">
+      <ion-row>
+        <ion-col size="11.3" class="display">{{display}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2.5" class="special-button" (click)="clear()">AC</ion-col>
+        <ion-col size="2.5" class="special-button" (click)="toggleSign()">+/-</ion-col>
+        <ion-col size="2.5" class="special-button" (click)="operation('%')">%</ion-col>
+        <ion-col size="2.5" class="operator-button" (click)="operation('÷')">÷</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2.5" (click)="numbers(7)">7</ion-col>
+        <ion-col size="2.5" (click)="numbers(8)">8</ion-col>
+        <ion-col size="2.5" (click)="numbers(9)">9</ion-col>
+        <ion-col size="2.5" class="operator-button" (click)="operation('x')">x</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2.5" (click)="numbers(4)">4</ion-col>
+        <ion-col size="2.5" (click)="numbers(5)">5</ion-col>
+        <ion-col size="2.5" (click)="numbers(6)">6</ion-col>
+        <ion-col size="2.5" class="operator-button" (click)="operation('-')">-</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2.5" (click)="numbers(1)">1</ion-col>
+        <ion-col size="2.5" (click)="numbers(2)">2</ion-col>
+        <ion-col size="2.5" (click)="numbers(3)">3</ion-col>
+        <ion-col size="2.5" class="operator-button" (click)="operation('+')">+</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="5.5" (click)="numbers(0)">0</ion-col>
+        <ion-col size="2.5" (click)="numbers('.')">.</ion-col>
+        <ion-col size="2.5" class="operator-button" (click)="equal()">=</ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

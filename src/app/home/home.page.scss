@@ -1,0 +1,61 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #15173c;
+}
+
+.content {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: #060820;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.display {
+  background-color: #15173c;
+  justify-content: right;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Estilos para los botones */
+ion-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  margin: 5px 6px;
+  background-color: #15173c;
+}
+.special-button {
+  background-color: #f59e0b;
+  color: #000000;
+}
+
+.operator-button {
+  background-color: #D03344;
+  color: white;
+}
+
+ion-col:hover {
+  background-color: #ccc;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+  ion-col {
+    height: 60px;
+    font-size: 1.2rem;
+  }
+}
