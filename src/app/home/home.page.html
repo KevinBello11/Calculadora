@@ -5,7 +5,14 @@
   <div class="container">
     <div class="content">
       <ion-row>
-        <ion-col size="11.3" class="display">{{display}}</ion-col>
+        <ion-col size="6.7" class="trig-functions" [style.display]="showTrigFunctions ? 'block' : 'none'">
+          <ion-row>
+            <ion-col size="2.5" class="special-button" (click)="trigFunction('sin')">sin</ion-col>
+            <ion-col size="2.5" class="special-button" (click)="trigFunction('cos')">cos</ion-col>
+            <ion-col size="2.5" class="special-button" (click)="trigFunction('tan')">tan</ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="4.6" class="display">{{ display }}</ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="2.5" class="special-button" (click)="clear()">AC</ion-col>
@@ -36,6 +43,18 @@
         <ion-col size="2.5" (click)="numbers('.')">.</ion-col>
         <ion-col size="2.5" class="operator-button" (click)="equal()">=</ion-col>
       </ion-row>
+      <ion-row>
+        <ion-col size="2.5" class="special-button" (click)="trigFunction('sin')">sin</ion-col>
+        <ion-col size="2.5" class="special-button" (click)="trigFunction('cos')">cos</ion-col>
+        <ion-col size="2.5" class="special-button" (click)="trigFunction('tan')">tan</ion-col>
+        <ion-col size="2.5" class="special-button" (click)="trigFunction('π')">π</ion-col>
+      </ion-row>
+      <!-- ... (código HTML anterior) ... -->
+      <ion-row>
+        <ion-col size="2.5" class="special-button" (click)="toggleTrigMode()">Deg/Rad</ion-col>
+      </ion-row>
+      <!-- ... (continúa con el resto del código) ... -->
+
     </div>
   </div>
 </ion-content>

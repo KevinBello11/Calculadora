@@ -38,6 +38,7 @@ ion-col {
   margin: 5px 6px;
   background-color: #15173c;
 }
+
 .special-button {
   background-color: #f59e0b;
   color: #000000;
@@ -52,8 +53,57 @@ ion-col:hover {
   background-color: #ccc;
 }
 
+.rotated {
+  transform: rotate(90deg); /* Aplica una rotación de 90 grados */
+  transform-origin: center; /* Establece el punto de origen de la rotación en el centro */
+  width: 100vh; /* Ajusta el ancho para que se ajuste al alto de la pantalla */
+  height: 100vw; /* Ajusta el alto para que se ajuste al ancho de la pantalla */
+}
+
+/* Estilos para la expansión */
+.expanded {
+  width: 100%;
+}
+
+/* Estilos para la parte izquierda de la calculadora (trig-functions) */
+.trig-functions {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.trig-functions .special-button {
+  width: 100%;
+  text-align: center;
+}
+
+/* Estilos para el botón de mostrar/ocultar funciones trigonométricas */
+.special-button.toggle-trig {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Ajuste de la responsividad */
+@media (max-width: 767px) {
+  .container {
+    font-size: 14px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+  }
+}
+
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 480px) {
+  .content {
+    max-width: 100%;
+    padding: 10px;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+  }
+
+  ion-row {
+    flex-direction: column; /* Cambia la dirección de las filas a vertical */
+  }
+
   ion-col {
     height: 60px;
     font-size: 1.2rem;
